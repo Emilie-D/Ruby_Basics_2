@@ -98,3 +98,48 @@ puts sum
 end
 
 #number_underscore
+
+def menu
+	puts "Hello, voici la liste des questions auquelles je peux répondre :"
+	print "-------------------------------------------------------------"
+	print " 
+	1.Combien y a-t-il de journalistes dans ce array ?
+	2.Combien d'handle contiennent un numéro ?
+	3.Combien d'handle contiennent les 4 lettres du prénom Aude à la suite (sans prendre en compte les majuscules) ?
+	4.Combien commencent par une majuscule (première lettre juste après le @) ?
+	5.Combien contiennent une majuscule ?
+	6.Combien y a-t-il de underscore _ dans tous les pseudos confondus ?
+	7.Trie la liste de handle par ordre alphabétique.
+	8.Quels sont les 50 handles les plus courts de ce array ?
+	9.Quelle est la position dans l'array de la personne @epenser ?"
+	puts
+	tour = 0
+	while tour < 9
+		tour += 1
+	puts "Tape le numéro de la question qui t'intéresse (tu as le droit à 9 tours) :"
+	number_user = gets.chomp.to_i
+	if number_user == 1
+		nombre_journalistes
+	elsif number_user == 2
+		handles_number
+	elsif number_user == 3
+		handles_aude
+	elsif number_user == 4
+		commence_maj
+	elsif number_user == 5
+		with_maj
+	elsif number_user == 6
+		number_underscore
+	elsif number_user == 7
+		ordre_alphabetique
+	elsif number_user == 8
+		handles_50
+	elsif handles_number == 9
+		position_epenser		
+	else number_user > 9 
+		puts "Erreur"
+	end
+end
+end
+
+menu
