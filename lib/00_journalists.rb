@@ -56,7 +56,7 @@ puts "combien d'handles contiennent une majuscule ?"
 i = 0							 
 Handle_Array.each do |a|          
 	if a.match(/[A-Z]/)           
-		i +=1
+		i += 1
 	end
 end
 puts "#{i}"
@@ -74,7 +74,7 @@ puts "combien d'handles commencent par une majuscule ?"
 i = 0
 x.each do |item|
    if item.match(/[a-z]/)
-       i +=1
+       i += 1
    end
 end
 puts "#{i}"
