@@ -31,8 +31,8 @@ puts myHash.values.min
 
 crypto_coin
 
-puts myHash.sort_by { |_, v| -v }.[0] #trier par valeurs puis sortir la 1ère (-v du + grand au plus petit)
-puts myHash.sort_by { |_, v| v }.[0]
-puts myHash.select { |_, v| v > 6000 }.sort_by { |_, v| -v}
+puts myHash.sort_by { |_, v| -v }[0] #trier par valeurs puis sortir la 1ère (-v du + grand au plus petit)
+puts  myHash.sort_by { |_, v| v }.first
+#puts myHash.select { |_, v| v > 6000 }.sort_by { |_, v| -v} # sort_by va créer un nouvelle array donc chaques k-v va se retrouver dans un array donc .first c'est pour séléctionner le premier array et [0] pour afficher que la clé
 puts "-----------------------------------------------------"
-puts myHash.select { |_, v| v < 6000 }.sort_by { |_, v| -v}
+#puts myHash.select { |_, v| v < 6000 }.sort_by { |_, v| -v}
